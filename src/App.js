@@ -1,7 +1,11 @@
+import library from './assets/images/library.jpeg';
+import './App.css'
+
 function App() {
   return (
     <div className="App">
-      <h1>Sanity Test from App</h1>
+      <h1>Tycoon's Outlet</h1>
+      <img src={library} alt="library" />
     </div>
   );
 }
