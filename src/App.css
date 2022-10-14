@@ -11,7 +11,6 @@
   border-radius: 15%;
   box-shadow: 15px 15px 15px black;
   opacity: 95%;
-  z-index: -1;
   border: solid 1px yellow;
   margin-bottom: 30px;
 }
