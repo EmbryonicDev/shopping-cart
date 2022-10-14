@@ -1,5 +1,5 @@
 import library from './assets/images/library.jpeg';
-import './App.css'
+import './App.css';
 
 function App() {
   return (
