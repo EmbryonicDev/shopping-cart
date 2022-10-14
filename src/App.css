@@ -13,6 +13,7 @@
   opacity: 95%;
   z-index: -1;
   border: solid 1px yellow;
+  margin-bottom: 30px;
 }
 
 .App h1 {
