@@ -3,16 +3,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  margin-bottom: 30px;
+  color: yellow;
+  font-family: 'MedievalSharp', cursive;
+  box-shadow: 0 15px 15px black;
+}
+
+.header h1 {
+  font-size: 60px;
+  margin: 0;
+  text-shadow: 5px 5px rgb(255, 255, 0, 0.2);
 }
 
 .header-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
+  margin: 12px;
+  font-size: 30px;
 }
 
-a {
+.header a {
   text-decoration: none;
   color: inherit;
+  background-color: yellow;
+  color: black;
+  padding: 6px;
+  border-radius: 6px;
+  width: 90px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.header a:active {
+  transform: scale(0.9);
 }
