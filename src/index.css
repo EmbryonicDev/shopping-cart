@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #d1d5db;
+  background-color: #f3f4f6;
+  background-image: url('./assets/images/dollars.jpeg');
+  background-size: 100vh;
 }
 
 code {
