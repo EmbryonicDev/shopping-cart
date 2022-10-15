@@ -10,6 +10,7 @@ export default function Shop(props) {
         name={item.name}
         image={item.image}
         price={item.price}
+        key={index}
       />
     )
   })
