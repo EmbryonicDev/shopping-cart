@@ -16,7 +16,6 @@ export default function Shop() {
   return (
     <div className="shop">
       {shopItemElements}
-      <h1>This is the shop page</h1>
     </div>
   )
 }
