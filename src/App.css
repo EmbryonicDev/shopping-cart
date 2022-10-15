@@ -14,10 +14,3 @@
   border: solid 1px yellow;
   margin-bottom: 30px;
 }
-
-.App h1 {
-  color: yellow;
-  position: absolute;
-  font-family: 'MedievalSharp', cursive;
-  font-size: 50px;
-}
