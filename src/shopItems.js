@@ -18,12 +18,12 @@ const newShopItem = (name, image, price, inCart = false, quantity = 0) => {
 }
 
 const temp = [
-  ['Aston Martin Vulcan', astonMartin, 23000000],
-  ['100kg Gold Bars', goldBars, 5363710],
+  ['Super Yacht', yacht, 110000000],
+  ['Secret Location Off-Grid Island', island, 80000000],
   ['Gulfstream Jet G650ER', jet, 60000000],
   ['Secret Location Off-Grid House', house, 25000000],
-  ['Secret Location Off-Grid Island', island, 80000000],
-  ['Super Yacht', yacht, 300000000]
+  ['100kg Gold Bars', goldBars, 5363710],
+  ['Aston Martin Vulcan', astonMartin, 2300000],
 ]
 
 temp.forEach(element => {
