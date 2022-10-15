@@ -1,10 +1,10 @@
-import shopItems from "../../shopItems"
 import ShopItem from "../ShopItem/ShopItem"
 import './Shop.css'
 
-export default function Shop() {
+export default function Shop(props) {
+  const { items } = props;
 
-  const shopItemElements = shopItems.map(item => {
+  const shopItemElements = items.map((item, index) => {
     return (
       <ShopItem
         name={item.name}
