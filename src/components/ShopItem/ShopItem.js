@@ -1,7 +1,7 @@
 import './ShopItem.css'
 
 const ShopItem = (props) => {
-  const { name, image, price } = props;
+  const { name, image, price, itemToCart } = props;
 
   return (
     <div className="shopItem">
@@ -10,7 +10,9 @@ const ShopItem = (props) => {
       <h2 className="price">Price: ${price}</h2>
       <div className='cartQtyWrap'>
         <input type="number" min='0' max='5' placeholder='0' />
-        <button>Add</button>
+        <button
+          onClick={itemToCart}
+        >Add</button>
       </div>
     </div>
   )

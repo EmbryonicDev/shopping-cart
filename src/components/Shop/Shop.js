@@ -2,7 +2,7 @@ import ShopItem from "../ShopItem/ShopItem"
 import './Shop.css'
 
 export default function Shop(props) {
-  const { items } = props;
+  const { items, itemToCart } = props;
 
   const shopItemElements = items.map((item, index) => {
     return (
@@ -11,6 +11,7 @@ export default function Shop(props) {
         image={item.image}
         price={item.price}
         key={index}
+        itemToCart={() => itemToCart(item.name)}
       />
     )
   })
