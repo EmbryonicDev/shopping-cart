@@ -17,7 +17,11 @@ const RouteSwitch = () => {
         if (cart.find(item => item.name === addItem.name)) {
           setCart(prevState => prevState.map(obj => {
             return obj.name === itemName ?
-              { ...obj, quantity: obj.quantity + 1 } :
+              {
+                ...obj,
+                quantity: obj.quantity + 1,
+                displayPrice: (obj.quantity + 1) * obj.displayPrice
+              } :
               obj
           }));
         } else {

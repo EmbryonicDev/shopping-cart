@@ -9,7 +9,7 @@ export default function Shop(props) {
       <ShopItem
         name={item.name}
         image={item.image}
-        price={item.price}
+        price={item.displayPrice}
         key={index}
         itemToCart={() => itemToCart(item.name)}
       />

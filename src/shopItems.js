@@ -7,11 +7,15 @@ import yacht from './assets/images/yacht.jpeg';
 
 const shopItems = [];
 
-const newShopItem = (name, image, price, inCart = false, quantity = 0) => {
+const newShopItem = (
+  name, image, price, inCart = false,
+  quantity = 0, displayPrice = price / 1000000
+) => {
   return {
     name,
     image,
     price,
+    displayPrice,
     inCart,
     quantity
   }
@@ -22,7 +26,7 @@ const temp = [
   ['Secret Location Off-Grid Island', island, 80000000],
   ['Gulfstream Jet G650ER', jet, 60000000],
   ['Secret Location Off-Grid House', house, 25000000],
-  ['100kg Gold Bars', goldBars, 5363710],
+  ['100kg Gold Bars', goldBars, 5400000],
   ['Aston Martin Vulcan', astonMartin, 2300000],
 ]
 
