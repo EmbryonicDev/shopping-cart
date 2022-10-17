@@ -7,8 +7,10 @@ import yacht from './assets/images/yacht.jpeg';
 
 const shopItems = [];
 
-const newShopItem = (name, image, price, inCart = false, quantity = 0) => {
-  const displayPrice = price / 1000000
+const newShopItem = (
+  name, image, price, inCart = false,
+  quantity = 0, displayPrice = price / 1000000
+) => {
   return {
     name,
     image,
