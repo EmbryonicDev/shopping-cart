@@ -20,7 +20,7 @@ const RouteSwitch = () => {
               {
                 ...obj,
                 quantity: obj.quantity + 1,
-                displayPrice: (obj.quantity + 1) * obj.displayPrice
+                totalPrice: (obj.quantity + 1) * obj.price
               } :
               obj
           }));
