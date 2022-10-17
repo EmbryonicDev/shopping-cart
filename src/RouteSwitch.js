@@ -10,33 +10,23 @@ const RouteSwitch = () => {
   const [cart, setCart] = useState([]);
 
   const itemToCart = (itemName) => {
-    console.log(itemName)
-
     for (let i = 0; i < shopItemsArr.length; i++) {
       const addItem = shopItemsArr[i];
 
       if (addItem.name === itemName) {
         if (cart.find(item => item.name === addItem.name)) {
-          console.log('item found in cart')
-          for (let j = 0; i < cart.length; i++) {
-            if (cart[j].name === itemName) {
-              const newQty = cart[j].quantity + 1;
-              console.log(newQty);
-              setCart(prevState => prevState.map(item => {
-                return item.name === itemName ?
-                  { ...item, quantity: newQty } :
-                  item;
-              }));
-            }
-          }
+          setCart(prevState => prevState.map(obj => {
+            return obj.name === itemName ?
+              { ...obj, quantity: obj.quantity + 1 } :
+              obj
+          }));
         } else {
-          addItem.quantity++;
-          setCart(prevState => [...prevState, { ...addItem, quantity: + 1 }])
+          setCart(prevState => [...prevState, { ...addItem, quantity: 1 }]);
         }
-        console.log(cart)
       }
     }
   }
+
   return (
     <BrowserRouter>
       <Routes>
