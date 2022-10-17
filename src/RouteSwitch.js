@@ -20,12 +20,12 @@ const RouteSwitch = () => {
               {
                 ...obj,
                 quantity: obj.quantity + 1,
-                displayPrice: (obj.quantity + 1) * obj.displayPrice
+                totalPrice: (obj.quantity + 1) * obj.price
               } :
               obj
           }));
         } else {
-          setCart(prevState => [...prevState, { ...addItem, quantity: 1 }]);
+          setCart(prevState => [...prevState, { ...addItem, quantity: 1, totalPrice: addItem.price }]);
         }
       }
     }

@@ -9,13 +9,12 @@ const shopItems = [];
 
 const newShopItem = (
   name, image, price, inCart = false,
-  quantity = 0, displayPrice = price / 1000000
+  quantity = 0
 ) => {
   return {
     name,
     image,
     price,
-    displayPrice,
     inCart,
     quantity
   }
