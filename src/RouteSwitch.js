@@ -25,7 +25,7 @@ const RouteSwitch = () => {
               obj
           }));
         } else {
-          setCart(prevState => [...prevState, { ...addItem, quantity: 1 }]);
+          setCart(prevState => [...prevState, { ...addItem, quantity: 1, totalPrice: addItem.price }]);
         }
       }
     }
