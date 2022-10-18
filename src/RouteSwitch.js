@@ -52,7 +52,9 @@ const RouteSwitch = () => {
 
   return (
     <>
-      <Header />
+      <Header
+        cartCount={cartCount}
+      />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
@@ -60,7 +62,8 @@ const RouteSwitch = () => {
             <Shop
               items={shopItemsArr}
               itemToCart={itemToCart}
-            />} />
+            />}
+          />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
