@@ -11,6 +11,8 @@ export default function Header(props) {
         <a href="/">Home</a>
         <a href="/shop">Shop</a>
         <a href="/cart">Cart</a>
+          <img src={cartIcon} alt="Cart Icon" />
+        </a>
       </div>
     </div>
   )
