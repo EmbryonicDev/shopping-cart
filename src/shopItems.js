@@ -8,14 +8,13 @@ import yacht from './assets/images/yacht.jpeg';
 const shopItems = [];
 
 const newShopItem = (
-  name, image, price, inCart = false,
+  name, image, price,
   quantity = 0
 ) => {
   return {
     name,
     image,
     price,
-    inCart,
     quantity
   }
 }
