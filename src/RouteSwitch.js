@@ -11,6 +11,7 @@ const RouteSwitch = () => {
 
   useEffect(() => {
     console.log(cart)
+
   }, [cart])
 
   const itemToCart = (itemName) => {
@@ -29,7 +30,13 @@ const RouteSwitch = () => {
               obj
           }));
         } else {
-          setCart(prevState => [...prevState, { ...addItem, quantity: 1, totalPrice: addItem.price }]);
+          setCart(prevState => [
+            ...prevState,
+            {
+              ...addItem,
+              quantity: 1,
+              totalPrice: addItem.price
+            }]);
         }
       }
     }
