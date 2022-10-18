@@ -43,10 +43,23 @@
   transform: scale(1.1);
   cursor: pointer;
   border: 2px solid blue;
-
 }
 
 .header a:active {
   transform: scale(0.95);
   box-shadow: inset 0 0 10px black;
+}
+
+.cartBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartBtn h4 {
+  margin: 0;
+}
+
+.cartBtn img {
+  height: 30px;
 }
