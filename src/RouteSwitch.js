@@ -17,7 +17,9 @@ const RouteSwitch = () => {
     }
   }, [cart]);
 
-  }, [cart])
+  useEffect(() => {
+    console.log(cartCount);
+  }, [cartCount]);
 
   const itemToCart = (itemName) => {
     for (let i = 0; i < shopItemsArr.length; i++) {
