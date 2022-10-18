@@ -4,6 +4,7 @@ import Shop from './components/Shop/Shop';
 import Cart from './components/Cart/Cart';
 import { useEffect, useState } from 'react';
 import shopItems from './shopItems';
+import Header from './components/Header/Header';
 
 const RouteSwitch = () => {
   const [shopItemsArr] = useState(shopItems);
@@ -50,17 +51,20 @@ const RouteSwitch = () => {
   }
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/shop" element={
-          <Shop
-            items={shopItemsArr}
-            itemToCart={itemToCart}
-          />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/shop" element={
+            <Shop
+              items={shopItemsArr}
+              itemToCart={itemToCart}
+            />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
