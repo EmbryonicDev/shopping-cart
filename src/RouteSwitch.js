@@ -8,6 +8,7 @@ import shopItems from './shopItems';
 const RouteSwitch = () => {
   const [shopItemsArr] = useState(shopItems);
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0)
 
   useEffect(() => {
     console.log(cart)
