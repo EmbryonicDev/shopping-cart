@@ -2,12 +2,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
 import Shop from './components/Shop/Shop';
 import Cart from './components/Cart/Cart';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import shopItems from './shopItems';
 
 const RouteSwitch = () => {
   const [shopItemsArr] = useState(shopItems);
   const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    console.log(cart)
+  }, [cart])
 
   const itemToCart = (itemName) => {
     for (let i = 0; i < shopItemsArr.length; i++) {
