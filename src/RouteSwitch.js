@@ -11,7 +11,11 @@ const RouteSwitch = () => {
   const [cartCount, setCartCount] = useState(0)
 
   useEffect(() => {
-    console.log(cart)
+    if (cart.length > 0) {
+      console.log(cart);
+      setCartCount(cart.reduce((acc, curr) => acc + curr.quantity, 0));
+    }
+  }, [cart]);
 
   }, [cart])
 
