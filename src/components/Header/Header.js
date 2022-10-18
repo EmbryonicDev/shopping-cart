@@ -12,6 +12,7 @@ export default function Header(props) {
         <a href="/shop">Shop</a>
         <a href="/cart">Cart</a>
           <img src={cartIcon} alt="Cart Icon" />
+          <h4>{cartCount > 0 && cartCount}</h4>
         </a>
       </div>
     </div>
