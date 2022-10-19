@@ -3,10 +3,7 @@ import './Cart.css'
 
 export default function Cart(props) {
   const { cartItems } = props;
-  console.log(cartItems)
-
-  const subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0)
-
+  const subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0);
 
   const cartElements = cartItems.map((item, index) => {
     return (
