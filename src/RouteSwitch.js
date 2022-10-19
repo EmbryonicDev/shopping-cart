@@ -72,6 +72,7 @@ const RouteSwitch = () => {
             <Shop
               items={shopItemsArr}
               itemToCart={itemToCart}
+              handleInputChange={handleInputChange}
             />}
           />
           <Route path="/cart" element={<Cart />} />
