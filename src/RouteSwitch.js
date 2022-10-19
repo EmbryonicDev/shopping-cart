@@ -88,7 +88,11 @@ const RouteSwitch = () => {
               handleInputChange={handleInputChange}
             />}
           />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={
+            <Cart
+              cartItems={cart}
+            />}
+          />
         </Routes>
       </BrowserRouter>
     </>
