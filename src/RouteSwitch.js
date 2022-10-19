@@ -59,6 +59,13 @@ const RouteSwitch = () => {
                 ...addItem,
                 totalPrice: addItem.quantity * addItem.price
               }]);
+          }
+          // Reset shop item input field to zero
+          setShopItemsArr(prevState => prevState.map(obj => {
+            return obj.name === addItem.name ?
+              { ...obj, quantity: 0 } :
+              obj;
+          }))
         }
       }
     }
