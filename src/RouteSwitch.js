@@ -9,7 +9,7 @@ import Header from './components/Header/Header';
 const RouteSwitch = () => {
   const [shopItemsArr, setShopItemsArr] = useState(shopItems);
   const [cart, setCart] = useState([]);
-  const [cartCount, setCartCount] = useState(0)
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     if (cart.length > 0) {
