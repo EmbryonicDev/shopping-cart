@@ -37,24 +37,28 @@ const RouteSwitch = () => {
       const addItem = shopItemsArr[i];
 
       if (addItem.name === itemName) {
-        if (cart.find(item => item.name === addItem.name)) {
-          setCart(prevState => prevState.map(obj => {
-            return obj.name === itemName ?
+        if (addItem.quantity > 0) {
+          if (cart.find(item => item.name === addItem.name)) {
+            setCart(prevState => prevState.map(obj => {
+              if (obj.name === itemName) {
+                const newQuantity = addItem.quantity + obj.quantity;
+                return {
+                  ...obj,
+                  quantity: newQuantity,
+                  totalPrice: newQuantity * obj.price
+                }
+              } else {
+                return obj
+              }
+            }));
+          }
+          else {
+            setCart(prevState => [
+              ...prevState,
               {
-                ...obj,
-                quantity: obj.quantity + 1,
-                totalPrice: (obj.quantity + 1) * obj.price
-              } :
-              obj
-          }));
-        } else {
-          setCart(prevState => [
-            ...prevState,
-            {
-              ...addItem,
-              quantity: 1,
-              totalPrice: addItem.price
-            }]);
+                ...addItem,
+                totalPrice: addItem.quantity * addItem.price
+              }]);
         }
       }
     }
