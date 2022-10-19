@@ -1,0 +1,48 @@
+.cart {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  background-color: white;
+  text-align: center;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+td:first-of-type {
+  text-align: start;
+}
+
+th {
+  font-size: 1.3rem;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+td:last-of-type {
+  border-right: none;
+}
+
+table tr:last-of-type td:first-of-type {
+  border-right: none;
+}
+
+table tr:last-of-type td:nth-child(3),
+table tr:last-of-type td:last-child {
+  border-top: double black;
+  font-weight: bolder;
+  background: rgb(247, 128, 128);
+}
+
+th {
+  background: green;
+  border-bottom: 3px solid blue;
+  color: white;
+  font-weight: bold;
+}
