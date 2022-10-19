@@ -7,7 +7,7 @@ import shopItems from './shopItems';
 import Header from './components/Header/Header';
 
 const RouteSwitch = () => {
-  const [shopItemsArr] = useState(shopItems);
+  const [shopItemsArr, setShopItemsArr] = useState(shopItems);
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0)
 
@@ -18,9 +18,19 @@ const RouteSwitch = () => {
     }
   }, [cart]);
 
-  useEffect(() => {
-    console.log(cartCount);
-  }, [cartCount]);
+  const handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    setShopItemsArr(prevState => prevState.map(item => {
+      return item.name === name ?
+        {
+          ...item,
+          quantity: Number(value)
+        } :
+        item
+    }));
+  }
 
   const itemToCart = (itemName) => {
     for (let i = 0; i < shopItemsArr.length; i++) {
