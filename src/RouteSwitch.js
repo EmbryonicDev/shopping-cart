@@ -8,13 +8,14 @@ import Header from './components/Header/Header';
 
 const RouteSwitch = () => {
   const [shopItemsArr, setShopItemsArr] = useState(shopItems);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     if (cart.length > 0) {
       console.log(cart);
       setCartCount(cart.reduce((acc, curr) => acc + curr.quantity, 0));
+      localStorage.setItem('cart', JSON.stringify(cart));
     }
   }, [cart]);
 
@@ -65,7 +66,8 @@ const RouteSwitch = () => {
             return obj.name === addItem.name ?
               { ...obj, quantity: 0 } :
               obj;
-          }))
+          }));
+          localStorage.setItem('cart', JSON.stringify(cart));
         }
       }
     }
