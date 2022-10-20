@@ -15,7 +15,6 @@ const RouteSwitch = () => {
     if (cart.length > -1) {
       setCartCount(cart.reduce((acc, curr) => acc + curr.quantity, 0));
       localStorage.setItem('cart', JSON.stringify(cart));
-      console.log(cart)
     }
   }, [cart]);
 
