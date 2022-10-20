@@ -10,6 +10,7 @@ table {
   font-size: 1.2rem;
   border-radius: 12px;
   box-shadow: 15px 15px 15px rgb(0, 0, 0, 0.8);
+  width: 85vw;
 }
 
 td:first-of-type {
