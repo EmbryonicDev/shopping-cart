@@ -12,7 +12,7 @@ const RouteSwitch = () => {
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
-    if (cart.length > 0) {
+    if (cart.length > -1) {
       console.log(cart);
       setCartCount(cart.reduce((acc, curr) => acc + curr.quantity, 0));
       localStorage.setItem('cart', JSON.stringify(cart));
@@ -47,6 +47,13 @@ const RouteSwitch = () => {
         } :
         item
     }));
+  }
+
+  const deleteItem = (name) => {
+    const index = cart.map(item => item.name).indexOf(name);
+    const tempArr = cart.splice(0);
+    tempArr.splice(index, 1);
+    setCart(tempArr);
   }
 
   const itemToCart = (itemName) => {
@@ -108,6 +115,7 @@ const RouteSwitch = () => {
             <Cart
               cartItems={cart}
               handleCartInputChange={handleCartInputChange}
+              deleteItem={deleteItem}
             />}
           />
         </Routes>
