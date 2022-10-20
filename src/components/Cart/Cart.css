@@ -46,3 +46,10 @@ th {
   color: white;
   font-weight: bold;
 }
+
+table input {
+  width: 40px;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-family: 'MedievalSharp', cursive;
+}
