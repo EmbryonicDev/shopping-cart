@@ -1,5 +1,5 @@
 const CartRow = (props) => {
-  const { name, quantity, price, totalPrice, handleCartInputChange } = props;
+  const { name, quantity, price, totalPrice, handleCartInputChange, deleteItem } = props;
 
   return (
     <tr>
@@ -13,6 +13,10 @@ const CartRow = (props) => {
           value={quantity}
           onChange={handleCartInputChange}
         />
+        <button
+          onClick={deleteItem}
+        >X
+        </button>
       </td>
       <td>${price} Million</td>
       <td>
