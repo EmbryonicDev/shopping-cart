@@ -7,7 +7,9 @@ table {
   background-color: white;
   text-align: center;
   border-spacing: 0;
-  border: 1px solid black;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 15px 15px 15px rgb(0, 0, 0, 0.8);
 }
 
 td:first-of-type {
@@ -16,6 +18,14 @@ td:first-of-type {
 
 th {
   font-size: 1.3rem;
+}
+
+th:first-of-type {
+  border-top-left-radius: 12px;
+}
+
+th:last-of-type {
+  border-top-right-radius: 12px;
 }
 
 th,
@@ -38,6 +48,14 @@ table tr:last-of-type td:last-child {
   border-top: double black;
   font-weight: bolder;
   background: rgb(247, 128, 128);
+}
+
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 12px;
+}
+
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 12px;
 }
 
 th {
