@@ -70,4 +70,23 @@ table input {
   font-size: 1rem;
   line-height: 1.2rem;
   font-family: 'MedievalSharp', cursive;
+  margin-right: 6px;
+}
+
+table button {
+  border: none;
+  font-size: 1rem;
+  border-radius: 50%;
+  height: 21px;
+  background: red;
+  font-weight: bold;
+}
+
+table button:hover {
+  cursor: pointer;
+  transform: scale(1.05)
+}
+
+table button:active {
+  transform: scale(0.95);
 }
