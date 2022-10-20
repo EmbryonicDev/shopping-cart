@@ -2,7 +2,7 @@ import CartRow from "./CartRow";
 import './Cart.css'
 
 export default function Cart(props) {
-  const { cartItems } = props;
+  const { cartItems, handleCartInputChange } = props;
   const subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0) / 1000000;
 
   const cartElements = cartItems.map((item, index) => {
@@ -13,6 +13,7 @@ export default function Cart(props) {
         price={item.price / 1000000}
         totalPrice={item.totalPrice / 1000000}
         key={index}
+        handleCartInputChange={handleCartInputChange}
       />
     )
   })
