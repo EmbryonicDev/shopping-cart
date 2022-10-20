@@ -1,4 +1,5 @@
 import CartRow from "./CartRow";
+import EmptyCart from "../EmptyCart/EmptyCart";
 import './Cart.css'
 
 export default function Cart(props) {
@@ -21,31 +22,38 @@ export default function Cart(props) {
 
   return (
     <div className="cart">
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Item Price</th>
-            <th>Total Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cartElements}
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Sub-Total</td>
-            <td>
-              {
-                subTotal < 1000 ?
-                  `$ ${subTotal} Million` :
-                  `$ ${subTotal / 1000} Billion`
-              }
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      {
+        cartItems.length > 0 &&
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Item Price</th>
+              <th>Total Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cartElements}
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Sub-Total</td>
+              <td>
+                {
+                  subTotal < 1000 ?
+                    `$ ${subTotal} Million` :
+                    `$ ${subTotal / 1000} Billion`
+                }
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      }
+      {
+        cartItems.length < 1 &&
+        <EmptyCart />
+      }
     </div>
   )
 }
