@@ -13,9 +13,9 @@ const RouteSwitch = () => {
 
   useEffect(() => {
     if (cart.length > -1) {
-      console.log(cart);
       setCartCount(cart.reduce((acc, curr) => acc + curr.quantity, 0));
       localStorage.setItem('cart', JSON.stringify(cart));
+      console.log(cart)
     }
   }, [cart]);
 
@@ -37,7 +37,6 @@ const RouteSwitch = () => {
     const target = event.target;
     const value = target.value;
     const name = target.name;
-    console.log(target)
     setCart(prevState => prevState.map(item => {
       return item.name === name ?
         {
