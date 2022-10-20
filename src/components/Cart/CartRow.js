@@ -1,10 +1,19 @@
 const CartRow = (props) => {
-  const { name, quantity, price, totalPrice } = props
+  const { name, quantity, price, totalPrice, handleCartInputChange } = props;
 
   return (
     <tr>
       <td>{name}</td>
-      <td>{quantity}</td>
+      <td>
+        <input
+          type="number"
+          name={name}
+          min='0'
+          max='5'
+          value={quantity}
+          onChange={handleCartInputChange}
+        />
+      </td>
       <td>${price} Million</td>
       <td>
         {
