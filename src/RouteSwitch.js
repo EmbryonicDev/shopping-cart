@@ -33,6 +33,22 @@ const RouteSwitch = () => {
     }));
   }
 
+  const handleCartInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    console.log(target)
+    setCart(prevState => prevState.map(item => {
+      return item.name === name ?
+        {
+          ...item,
+          quantity: Number(value),
+          totalPrice: item.price * Number(value)
+        } :
+        item
+    }));
+  }
+
   const itemToCart = (itemName) => {
     for (let i = 0; i < shopItemsArr.length; i++) {
       const addItem = shopItemsArr[i];
@@ -91,6 +107,7 @@ const RouteSwitch = () => {
           <Route path="/cart" element={
             <Cart
               cartItems={cart}
+              handleCartInputChange={handleCartInputChange}
             />}
           />
         </Routes>
