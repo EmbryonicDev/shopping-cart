@@ -25,6 +25,10 @@
   margin: 9px 0 0;
 }
 
+.shopItem:last-of-type {
+  margin-bottom: 32px;
+}
+
 .cartQtyWrap input,
 .cartQtyWrap button {
   width: 30px;
