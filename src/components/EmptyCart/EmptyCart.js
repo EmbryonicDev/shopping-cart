@@ -1,4 +1,4 @@
-import './EmptyCart.css'
+import './EmptyCart.css';
 
 const EmptyCart = () => {
   return (
