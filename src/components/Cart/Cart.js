@@ -3,15 +3,15 @@ import './Cart.css'
 
 export default function Cart(props) {
   const { cartItems } = props;
-  const subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0);
+  const subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0) / 1000000;
 
   const cartElements = cartItems.map((item, index) => {
     return (
       <CartRow
         name={item.name}
         quantity={item.quantity}
-        price={item.price}
-        totalPrice={item.totalPrice}
+        price={item.price / 1000000}
+        totalPrice={item.totalPrice / 1000000}
         key={index}
       />
     )
@@ -34,7 +34,13 @@ export default function Cart(props) {
             <td></td>
             <td></td>
             <td>Sub-Total</td>
-            <td>${subTotal / 1000000} Million</td>
+            <td>
+              {
+                subTotal < 1000 ?
+                  `$ ${subTotal} Million` :
+                  `$ ${subTotal / 1000} Billion`
+              }
+            </td>
           </tr>
         </tbody>
       </table>
