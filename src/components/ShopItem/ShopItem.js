@@ -2,6 +2,18 @@ import './ShopItem.css'
 
 const ShopItem = (props) => {
   const { name, image, price, itemToCart, handleInputChange, quantity, warning } = props;
+  let style;
+
+  if (warning) {
+    style = {
+      color: 'black',
+      background: 'yellow',
+      borderRadius: '12px',
+      border: 'none'
+    };
+  } else {
+    style = { color: 'transparent' };
+  }
 
   return (
     <div className="shopItem">
