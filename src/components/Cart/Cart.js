@@ -4,7 +4,11 @@ import './Cart.css'
 
 export default function Cart(props) {
   const { cartItems, handleCartInputChange, deleteItem } = props;
-  const subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0) / 1000000;
+  let subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0) / 1000000;
+
+  if (subTotal % 1 !== 0) {
+    subTotal = subTotal.toFixed(2);
+  }
 
   const cartElements = cartItems.map((item, index) => {
     return (
