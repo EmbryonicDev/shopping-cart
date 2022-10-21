@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.89393c3c.css",
+    "main.js": "/shopping-cart/static/js/main.4643b790.js",
+    "static/media/astonMartinVulcan.jpeg": "/shopping-cart/static/media/astonMartinVulcan.89ccd3358d132a07931e.jpeg",
+    "static/media/library.jpeg": "/shopping-cart/static/media/library.dccb4f7c39463930a285.jpeg",
+    "static/media/dollars.jpeg": "/shopping-cart/static/media/dollars.78619c9f31758b7772c1.jpeg",
+    "static/media/yacht.jpeg": "/shopping-cart/static/media/yacht.0b5d41c67383b36da6ff.jpeg",
+    "static/media/goldBars.jpeg": "/shopping-cart/static/media/goldBars.80153169b04574ad315e.jpeg",
+    "static/media/island.jpeg": "/shopping-cart/static/media/island.3dcf3a230c727986c954.jpeg",
+    "static/media/gulfstreamJet.jpeg": "/shopping-cart/static/media/gulfstreamJet.c6960d27c87b64a6b6e3.jpeg",
+    "static/media/house.jpeg": "/shopping-cart/static/media/house.64e9964d136a7948bf74.jpeg",
+    "index.html": "/shopping-cart/index.html",
+    "static/media/shopCart.svg": "/shopping-cart/static/media/shopCart.03a706e9d6046b4ad90dd2af5508a635.svg",
+    "main.89393c3c.css.map": "/shopping-cart/static/css/main.89393c3c.css.map",
+    "main.4643b790.js.map": "/shopping-cart/static/js/main.4643b790.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89393c3c.css",
+    "static/js/main.4643b790.js"
+  ]
+}
