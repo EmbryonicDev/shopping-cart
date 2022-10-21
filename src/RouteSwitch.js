@@ -54,6 +54,20 @@ const RouteSwitch = () => {
     setCart(tempArr);
   }
 
+  const handleWarning = (name) => {
+    const setWarning = (trueOrFalse) => {
+      setShopItemsArr(prevState => prevState.map(obj => {
+        return obj.name === name ?
+          { ...obj, warning: trueOrFalse } :
+          obj;
+      }))
+    }
+    setWarning(true);
+    setTimeout(() => {
+      setWarning(false)
+    }, 4000);
+  }
+
   const itemToCart = (itemName) => {
     for (let i = 0; i < shopItemsArr.length; i++) {
       const addItem = shopItemsArr[i];
@@ -63,7 +77,13 @@ const RouteSwitch = () => {
           if (cart.find(item => item.name === addItem.name)) {
             setCart(prevState => prevState.map(obj => {
               if (obj.name === itemName) {
-                const newQuantity = addItem.quantity + obj.quantity;
+                let newQuantity = addItem.quantity + obj.quantity;
+
+                if (newQuantity > 5) {
+                  newQuantity = 5;
+                  handleWarning(itemName);
+                }
+
                 return {
                   ...obj,
                   quantity: newQuantity,

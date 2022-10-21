@@ -1,7 +1,19 @@
 import './ShopItem.css'
 
 const ShopItem = (props) => {
-  const { name, image, price, itemToCart, handleInputChange, quantity } = props;
+  const { name, image, price, itemToCart, handleInputChange, quantity, warning } = props;
+  let style;
+
+  if (warning) {
+    style = {
+      color: 'black',
+      background: 'yellow',
+      borderRadius: '12px',
+      border: 'none'
+    };
+  } else {
+    style = { color: 'transparent' };
+  }
 
   return (
     <div className="shopItem">
@@ -21,6 +33,9 @@ const ShopItem = (props) => {
         <button
           onClick={itemToCart}
         >Add</button>
+      </div>
+      <div className='warning' style={style}>
+        <h3>Only 5 of Each Item Allowed</h3>
       </div>
     </div>
   )

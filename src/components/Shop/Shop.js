@@ -12,6 +12,7 @@ export default function Shop(props) {
         price={item.price}
         key={index}
         quantity={item.quantity}
+        warning={item.warning}
         handleInputChange={handleInputChange}
         itemToCart={() => itemToCart(item.name)}
       />
