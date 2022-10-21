@@ -6,6 +6,15 @@ export default function Cart(props) {
   const { cartItems, handleCartInputChange, deleteItem } = props;
   let subTotal = cartItems.reduce((acc, curr) => acc + curr.totalPrice, 0) / 1000000;
 
+  let millOrBill;
+  subTotal < 1000 ?
+    millOrBill = 'Million' :
+    millOrBill = 'Billion';
+
+  // to display total in billions
+  if (subTotal > 1000) subTotal = subTotal / 1000;
+
+  // 2 x decimals when decimals are present
   if (subTotal % 1 !== 0) {
     subTotal = subTotal.toFixed(2);
   }
@@ -43,13 +52,7 @@ export default function Cart(props) {
               <td></td>
               <td></td>
               <td>Sub-Total</td>
-              <td>
-                {
-                  subTotal < 1000 ?
-                    `$ ${subTotal} Million` :
-                    `$ ${subTotal / 1000} Billion`
-                }
-              </td>
+              <td>${subTotal} {millOrBill}</td>
             </tr>
           </tbody>
         </table>
