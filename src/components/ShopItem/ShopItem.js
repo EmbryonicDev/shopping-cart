@@ -1,7 +1,7 @@
 import './ShopItem.css'
 
 const ShopItem = (props) => {
-  const { name, image, price, itemToCart, handleInputChange, quantity } = props;
+  const { name, image, price, itemToCart, handleInputChange, quantity, warning } = props;
 
   return (
     <div className="shopItem">
