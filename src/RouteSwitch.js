@@ -63,7 +63,12 @@ const RouteSwitch = () => {
           if (cart.find(item => item.name === addItem.name)) {
             setCart(prevState => prevState.map(obj => {
               if (obj.name === itemName) {
-                const newQuantity = addItem.quantity + obj.quantity;
+                let newQuantity = addItem.quantity + obj.quantity;
+
+                if (newQuantity > 5) {
+                  newQuantity = 5;
+                }
+
                 return {
                   ...obj,
                   quantity: newQuantity,
