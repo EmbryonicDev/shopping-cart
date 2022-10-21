@@ -22,6 +22,9 @@ const ShopItem = (props) => {
           onClick={itemToCart}
         >Add</button>
       </div>
+      <div className='warning' style={style}>
+        <h3>Only 5 of Each Item Allowed</h3>
+      </div>
     </div>
   )
 }
