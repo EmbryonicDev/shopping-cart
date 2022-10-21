@@ -8,14 +8,14 @@ import yacht from './assets/images/yacht.jpeg';
 const shopItems = [];
 
 const newShopItem = (
-  name, image, price,
-  quantity = 0
+  name, image, price
 ) => {
   return {
     name,
     image,
     price,
-    quantity
+    quantity: 0,
+    warning: false
   }
 }
 
