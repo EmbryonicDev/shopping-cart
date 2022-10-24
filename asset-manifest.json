@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.89393c3c.css",
+    "main.css": "/shopping-cart/static/css/main.6fe509b1.css",
     "main.js": "/shopping-cart/static/js/main.e6bcbe64.js",
     "static/media/astonMartinVulcan.jpeg": "/shopping-cart/static/media/astonMartinVulcan.89ccd3358d132a07931e.jpeg",
     "static/media/library.jpeg": "/shopping-cart/static/media/library.dccb4f7c39463930a285.jpeg",
@@ -12,11 +12,11 @@
     "static/media/house.jpeg": "/shopping-cart/static/media/house.64e9964d136a7948bf74.jpeg",
     "index.html": "/shopping-cart/index.html",
     "static/media/shopCart.svg": "/shopping-cart/static/media/shopCart.03a706e9d6046b4ad90dd2af5508a635.svg",
-    "main.89393c3c.css.map": "/shopping-cart/static/css/main.89393c3c.css.map",
+    "main.6fe509b1.css.map": "/shopping-cart/static/css/main.6fe509b1.css.map",
     "main.e6bcbe64.js.map": "/shopping-cart/static/js/main.e6bcbe64.js.map"
   },
   "entrypoints": [
-    "static/css/main.89393c3c.css",
+    "static/css/main.6fe509b1.css",
     "static/js/main.e6bcbe64.js"
   ]
 }
