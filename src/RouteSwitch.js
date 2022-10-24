@@ -119,7 +119,7 @@ const RouteSwitch = () => {
       <Header
         cartCount={cartCount}
       />
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/shop" element={
